@@ -1,0 +1,38 @@
+<div  #top class="master-container">
+  <!-- svg #topsvg attr.width="100" attr.height="100" [attr.viewBox]="getViewBox()" preserveAspectRatio -->
+
+  <svg [attr.width]="pixelWidth" [attr.height]="pixelHeight" [attr.viewBox]="getViewBox()" attr.preserveAspectRatio>
+
+
+    <g attr.transform="{{'translate(0,-' + pixelHeight + ') scale(1,-1)'}}">
+
+   
+    <!-- axes -->
+
+    <!-- curves -->
+    <path *ngFor="let line of data.lines" 
+        [attr.d]="getPath( line )"
+        fill = "none"
+        [attr.stroke]=line.color
+        [attr.stroke-width]=line.thickness
+      />
+    
+      <!--
+        <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />
+      -->
+
+      <svg:line [attr.x1]="renderGridLine( axisX0 ).points[0].x" 
+          [attr.x2]="renderGridLine( axisX0 ).points[1].x" 
+          [attr.y1]="renderGridLine( axisX0 ).points[0].y" 
+          [attr.y2]="renderGridLine( axisX0 ).points[1].y"
+          attr.style="stroke:rgb(255,0,0);stroke-width:2" />
+      <!--
+      this.bounds = {
+        lowerLeft:{ data: [-10,-10]},
+        upperRight: {data : [10,10]}
+      } -->
+    </g>
+    
+
+  </svg>
+</div>

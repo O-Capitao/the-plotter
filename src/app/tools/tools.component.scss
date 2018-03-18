@@ -1,0 +1,33 @@
+.master-container{
+    position: absolute;
+    height: 70%;
+    right: 0px;
+    background-color: rgb(50,50,50);
+    border-radius: 5px;
+}
+
+.collapsed {
+    top: 15%;
+    width: 80px;
+
+}
+
+.extended {
+    top: 15%;
+    width: 380px;
+
+}
+
+.master-container .content {
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    top:10%;
+    left: 10%;
+    border: 1px solid wheat;
+
+}
+
+.master-container .content span {
+    color: rgb(220,220,220)
+}

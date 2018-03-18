@@ -1,0 +1,22 @@
+.master-container {
+    background-color: rgb(20,20,20);
+    position: absolute;
+    top:0px;
+    height: 40px;
+    left: 0px;
+    width: 100%;
+
+    span {
+        margin-top: 20px;
+        margin-left: 20px;
+        display: inline-block;
+        color: rgb(200,200,200);
+        cursor: pointer;
+    }
+    
+    span:hover {
+        color: rgb(100,200,100);
+        font-size: 13px;
+    }
+}
+
